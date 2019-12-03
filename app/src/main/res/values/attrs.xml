@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Good">
+        <!--format值得时返回到代码中的格式-->
+        <!--指定图片的资源Id-->
+        <attr name="imgsrc" format="reference|color"/>
+        <!--指定textview显示的内容-->
+        <attr name="tvtext" format="string"/>
+    </declare-styleable>
+
+</resources>

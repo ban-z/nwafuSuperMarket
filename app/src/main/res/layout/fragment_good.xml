@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.other.GoodFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Widget.Design.AppBarLayout"
+        android:layout_height="350dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+            app:contentScrim="?attr/colorPrimary"
+            app:collapsedTitleGravity="top"
+            app:expandedTitleGravity="bottom"
+            android:background="@color/gray"
+            app:expandedTitleMarginBottom="5dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_good_msg"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FF5722"
+                android:visibility="visible"
+                app:layout_collapseMode="pin"
+                android:backgroundTint="@color/gray"
+                app:title="商品详情" />
+
+            <ImageView
+                android:id="@+id/img_good"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nabinabi"
+                android:layout_marginBottom="40dp"
+                app:layout_collapseMode="parallax"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nest_sv_good_operation"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_detailed_good"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/detailedgoodopreation"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_good_operation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@id/nest_sv_good_operation"
+        app:srcCompat="@drawable/addgood"
+        android:backgroundTint="@color/orange"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

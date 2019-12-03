@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_bottom_naviation_item2" />
+
+    <item android:id="@+id/goodsTypeFragment"
+        android:title="@string/menu_goodstype"
+        android:icon="@drawable/ic_bottom_naviation_item1" />
+
+    <item android:id="@+id/cartFragment"
+        android:title="@string/menu_shoppingcart"
+        android:icon="@drawable/ic_bottom_naviation_item3" />
+
+    <item android:id="@+id/mineFragment"
+        android:title="@string/menu_mine"
+        android:icon="@drawable/ic_bottom_naviation_item4" />
+
+</menu>

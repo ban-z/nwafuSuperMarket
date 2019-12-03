@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_mine_select_waitpayment"
+        android:title="待付款"
+        android:icon="@drawable/waitpayment"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_follow"
+        android:title="待收货"
+        android:icon="@drawable/waitdeliver"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_footmark"
+        android:title="评价"
+        android:icon="@drawable/apprise"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_balance"
+        android:title="余额"
+        android:icon="@drawable/balance"/>
+
+</menu>

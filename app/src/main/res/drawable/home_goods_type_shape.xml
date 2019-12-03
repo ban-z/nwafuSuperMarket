@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<solid android:color="#00BCD4"/>-->
+    <corners android:radius="24dp"/>
+    <padding
+        android:bottom="12dp"
+        android:top="12dp" />
+
+    <!-- 实际显示的线 -->
+    <stroke
+        android:width="5dp"
+        android:color="#009688"/>
+
+</shape>

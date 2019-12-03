@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/detailed_good_opreation_1"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_2"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_3"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_4"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_5"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_6"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_7"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+    <item android:id="@+id/detailed_good_opreation_8"
+        android:icon="@drawable/ic_setting"
+        android:title="好难搞哦"/>
+
+</menu>

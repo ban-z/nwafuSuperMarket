@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_cart_good"
+        android:layout_width="160dp"
+        android:layout_height="160dp"/>
+
+    <TextView
+        android:id="@+id/tv_cart_good_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_right"
+        android:layout_toRightOf="@id/img_cart_good"
+        android:textSize="@dimen/cart_good_titile"
+        android:text="@string/default_home_goods_item_title" />
+
+    <TextView
+        android:id="@+id/tv_cart_good_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_right"
+        android:layout_below="@id/tv_cart_good_title"
+        android:layout_toRightOf="@id/img_cart_good"
+        android:textSize="@dimen/cart_good_content"
+        android:text="@string/default_home_goods_item_title" />
+
+</RelativeLayout>

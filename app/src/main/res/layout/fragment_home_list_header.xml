@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_home_list_header"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/fragmnet_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/titlebar_tv_title"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_left"
+                android:text="@string/default_title_content"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/titlebat_tv_serach"
+                style="@android:style/Widget.Material.TextView"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_marginRight="@dimen/common_margin_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_height="wrap_content"
+                android:background="@drawable/titlebar_tv_serach"
+                android:paddingVertical="@dimen/common_margin_top"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:text="@string/title_serach_content"
+                android:textSize="@dimen/titlebar_serach_textSize"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_recommand"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginHorizontal="@dimen/common_margin_horizontal">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_recommand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="0dp"
+                android:paddingHorizontal="0dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_dot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </FrameLayout>
+
+        <TableLayout
+            android:id="@+id/fragmnet_home_table_goods"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tablerow">
+
+                <ImageButton
+                    android:id="@+id/home_good_mainfood"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mainfood" />
+
+                <ImageButton
+                    android:id="@+id/home_good_otherfood"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/otherfood" />
+
+                <ImageButton
+                    android:id="@+id/home_good_lifegood"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/lifegood" />
+
+                <ImageButton
+                    android:id="@+id/home_good_drink"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/drink" />
+
+                <ImageButton
+                    android:id="@+id/home_good_gradenstuff"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gradenstuff" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</layout>

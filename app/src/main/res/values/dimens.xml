@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="titlebar_title_textSize">18dp</dimen>
+    <dimen name="titlebar_serach_textSize">12dp</dimen>
+    <dimen name="titlebar_serach_textview">15dp</dimen>
+
+    <dimen name="cart_good_titile">18dp</dimen>
+    <dimen name="cart_good_content">14dp</dimen>
+
+    <dimen name="common_margin_horizontal">18dp</dimen>
+    <dimen name="common_margin_right">10dp</dimen>
+    <dimen name="common_padding_right">5dp</dimen>
+    <dimen name="common_margin_top">5dp</dimen>
+    <dimen name="common_padding_top">5dp</dimen>
+    <dimen name="common_margin_left">5dp</dimen>
+    <dimen name="common_padding_left">5dp</dimen>
+
+    <!--<dimen name="good_item_img_sizeX">48dp</dimen>
+    <dimen name="good_item_img_sizeY">48dp</dimen>
+    <dimen name="good_item_tv_height">16dp</dimen>-->
+
+    <dimen name="home_goods_type_item_img_sizeY">64dp</dimen>
+    <dimen name="home_goods_type_item_title_sizeX">64dp</dimen>
+    <dimen name="home_goods_type_item_title_sizeY">24dp</dimen>
+    <dimen name="home_goods_item_marginX">15dp</dimen>
+    <dimen name="home_act_common_marginY">24dp</dimen>
+
+</resources>

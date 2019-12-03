@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autoview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.HomeActivity">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_goods_type_shape"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/home_good_raw_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_good_raw_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+            <com.banzh.nwafusupermarket.view.customview.Good
+                android:id="@+id/home_good_item_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                autoview:imgsrc="@drawable/ic_launcher_foreground"
+                autoview:tvtext="@string/default_home_goods_item_title"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_mine_select_favorite"
+        android:title="收藏夹"
+        android:icon="@drawable/favorite"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_follow"
+        android:title="关注"
+        android:icon="@drawable/follow"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_footmark"
+        android:title="足迹"
+        android:icon="@drawable/footmark"/>
+
+    <item
+        android:id="@+id/fragment_mine_select_customerserver"
+        android:title="售后"
+        android:icon="@drawable/customerserver"/>
+
+</menu>
