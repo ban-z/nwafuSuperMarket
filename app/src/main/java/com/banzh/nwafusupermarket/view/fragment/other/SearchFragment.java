@@ -14,9 +14,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.banzh.nwafusupermarket.R;
 import com.banzh.nwafusupermarket.databinding.FragmentSearchBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SearchFragment extends Fragment {
 
@@ -24,6 +26,8 @@ public class SearchFragment extends Fragment {
     ImageButton btnGoBack;
     EditText etSearchGood;
     Button btnSearchGood;
+
+    BottomNavigationView bNav;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -40,6 +44,8 @@ public class SearchFragment extends Fragment {
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         // Inflate the layout for this fragment
         searchBinding = FragmentSearchBinding.inflate(inflater);
+        bNav = getActivity().findViewById(R.id.navigation_bottom);
+        bNav.setVisibility(View.GONE);
         return searchBinding.getRoot();
     }
 
@@ -61,8 +67,9 @@ public class SearchFragment extends Fragment {
         btnSearchGood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(SearchFragment.this)
-                        .navigate(R.id.action_searchFragment_to_goodFragment);
+                /*NavHostFragment.findNavController(SearchFragment.this)
+                        .navigate(R.id.action_searchFragment_to_goodFragment);*/
+                Toast.makeText(getActivity(), "服务器出小差了，稍候重试...", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -70,6 +77,7 @@ public class SearchFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+        bNav.setVisibility(View.VISIBLE);
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
 }

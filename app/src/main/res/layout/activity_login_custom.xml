@@ -10,39 +10,52 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/loginbackground"
         tools:context=".activity.login.LoginActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/supermarket"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_login_title"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="128dp"
-            android:text="请登录："
-            android:textSize="32dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="西农微超市"
+            android:textSize="48dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
-            android:inputType="textVisiblePassword"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/login_edittext_background"
+            android:drawableStart="@drawable/ic_person_outline_black_24dp"
             android:hint="请输入账号..."
+            android:inputType="textVisiblePassword"
+            android:textSize="24dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_login_title" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginHorizontal="64dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/login_edittext_background"
+            android:textSize="24dp"
+            android:drawableStart="@drawable/ic_vpn_key_black_24dp"
             android:inputType="textPassword"
             android:hint="请输入密码..."
 
@@ -55,25 +68,38 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:text="登录"
-            app:layout_constraintEnd_toStartOf="@+id/btn_register"
+            android:background="@drawable/login_button_background"
+            android:layout_marginHorizontal="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
         <Button
             android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginTop="8dp"
+            android:text="注册"
+            android:background="@drawable/login_button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <Button
+            android:id="@+id/btn_direct_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:text="注册"
+            android:background="@drawable/login_button_background"
+            android:text="直接登录"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
         <ProgressBar
             android:id="@+id/loading"
@@ -90,6 +116,39 @@
             app:layout_constraintStart_toStartOf="@id/et_password"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="18dp"
+            android:text="忘记密码"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="5dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="@color/gray"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_add_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="18dp"
+            android:text="点击反馈"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_forget_password" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -55,6 +55,10 @@
         android:id="@+id/goodFragment"
         android:name="com.banzh.nwafusupermarket.view.fragment.other.GoodFragment"
         android:label="fragment_good"
-        tools:layout="@layout/fragment_good" />
+        tools:layout="@layout/fragment_good" >
+        <action
+            android:id="@+id/action_goodFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
 
 </navigation>

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.banzh.nwafusupermarket.R;
 import com.banzh.nwafusupermarket.data.ListGoodsItem;
+import com.banzh.nwafusupermarket.databinding.LayoutGoodstypeRecycleviewItemBinding;
 import com.banzh.nwafusupermarket.databinding.LayoutHomeListviewItemBinding;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class RecyclerGoodsAdapter extends RecyclerView.Adapter<RecyclerGoodsAdap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_home_listview_item,
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_goodstype_recycleview_item,
                 parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -38,9 +39,9 @@ public class RecyclerGoodsAdapter extends RecyclerView.Adapter<RecyclerGoodsAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ListGoodsItem item = mListGoodsItems.get(position);
-        holder.img_list_item.setImageDrawable(item.getDrawable());
-        holder.tv_list_item_title.setText(item.getTitle());
-        holder.tv_list_item_content.setText(item.getContent());
+        holder.img_cart_list_item.setImageDrawable(item.getDrawable());
+        holder.tv_cart_list_item_title.setText(item.getTitle());
+        holder.tv_cart_list_item_content.setText(item.getContent());
     }
 
     @Override
@@ -50,19 +51,19 @@ public class RecyclerGoodsAdapter extends RecyclerView.Adapter<RecyclerGoodsAdap
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        LayoutHomeListviewItemBinding itemBinding;
+        LayoutGoodstypeRecycleviewItemBinding itemBinding;
 
-        ImageView img_list_item;
-        TextView tv_list_item_title;
-        TextView tv_list_item_content;
+        ImageView img_cart_list_item;
+        TextView tv_cart_list_item_title;
+        TextView tv_cart_list_item_content;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemBinding = DataBindingUtil.bind(itemView);
 
-            img_list_item = itemBinding.imgListItem;
-            tv_list_item_title = itemBinding.tvListItemTitle;
-            tv_list_item_content = itemBinding.tvListItemContent;
+            img_cart_list_item = itemBinding.imgCartItem;
+            tv_cart_list_item_title = itemBinding.tvCartItemTitle;
+            tv_cart_list_item_content = itemBinding.tvCartItemContent;
         }
     }
 }

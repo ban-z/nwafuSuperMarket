@@ -27,7 +27,7 @@ public class HomeActivity extends BaseActivity {
     private static String TAG = "HomeActivity";
 
     ActivityHomeBinding homeBinding;
-    BottomNavigationView bottomNavigationView;
+    public BottomNavigationView bottomNavigationView;
     NavController navController;
 
     private UserViewModel userViewModel;
@@ -72,5 +72,9 @@ public class HomeActivity extends BaseActivity {
 
     public UserViewModel getUserViewModel() {
         return userViewModel;
+    }
+
+    public BottomNavigationView getBottomNavigationView(){
+        return bottomNavigationView;
     }
 }

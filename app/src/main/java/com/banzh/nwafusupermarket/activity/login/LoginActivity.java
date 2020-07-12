@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnLogin;
     private Button btnRegister;
+    private Button btnDirectLogin;
     private ProgressBar loadingProgressBar;
 
     private static int CODE_FOR_PERMISSIONS = 123;
@@ -69,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = loginBinding.etPassword;
         btnLogin = loginBinding.btnLogin;
         btnRegister = loginBinding.btnRegister;
+        btnDirectLogin = loginBinding.btnDirectLogin;
         loadingProgressBar = loginBinding.loading;
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -198,6 +200,19 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
                 threadRegister.start();
+            }
+        });
+
+        btnDirectLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String userName = "测试";
+                final String password = "123456";
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                intent.putExtra("username", userName);
+                intent.putExtra("password", password);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
     }

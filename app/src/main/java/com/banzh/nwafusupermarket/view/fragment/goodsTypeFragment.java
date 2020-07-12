@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -21,7 +22,9 @@ import android.widget.ImageButton;
 import com.banzh.nwafusupermarket.R;
 import com.banzh.nwafusupermarket.adapter.RecyclerGoodsAdapter;
 import com.banzh.nwafusupermarket.data.ListGoodsItem;
+import com.banzh.nwafusupermarket.data.creater.GoodsArrayList;
 import com.banzh.nwafusupermarket.databinding.FragmentGoodsTypeBinding;
+import com.google.android.material.navigation.NavigationView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,8 +42,9 @@ public class goodsTypeFragment extends Fragment implements SurfaceHolder.Callbac
     LinearLayoutManager linearLayoutManager;
     RecyclerGoodsAdapter goodsAdapter;
     ImageButton btnSwitchVideo;
+    NavigationView navGoodsType;
 
-    List<ListGoodsItem> mListGoodsItems = new ArrayList<>();
+    ArrayList<ListGoodsItem> mListGoodsItems = new ArrayList<>();
     boolean video_flag = false;
 
     public goodsTypeFragment() {
@@ -77,12 +81,14 @@ public class goodsTypeFragment extends Fragment implements SurfaceHolder.Callbac
         surfaceHolder.addCallback(this);
         mediaPlayer = new MediaPlayer();
 
+        /*
+        播放视频相关代码
         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.start();
             }
-        });
+        });*/
 
         rv_goodstype = goodsTypeBinding.rvGoodstype;
 
@@ -91,6 +97,8 @@ public class goodsTypeFragment extends Fragment implements SurfaceHolder.Callbac
         goodsAdapter = new RecyclerGoodsAdapter(mListGoodsItems);
         rv_goodstype.setAdapter(goodsAdapter);
 
+        /*
+        播放视频相关代码
         btnSwitchVideo = goodsTypeBinding.btnSwitchVideo;
         btnSwitchVideo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,57 +111,37 @@ public class goodsTypeFragment extends Fragment implements SurfaceHolder.Callbac
                         video_flag = !video_flag;
                 }
             }
+        });*/
+
+        //初始化商品
+        navGoodsType = goodsTypeBinding.navGoodsType;
+        navGoodsType.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.good_item_food:
+
+                        break;
+                    case R.id.good_item_otherfood:
+
+                        break;
+                    case R.id.good_item_everydaygoods:
+
+                        break;
+                    case R.id.good_item_fresh:
+
+                        break;
+                    case R.id.good_item_drink:
+
+                        break;
+                }
+                return true;
+            }
         });
     }
 
     private void initListGoodsItems() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            ListGoodsItem listGoodsItem1 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem1);
-            ListGoodsItem listGoodsItem2 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem2);
-            ListGoodsItem listGoodsItem3 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem3);
-            ListGoodsItem listGoodsItem4 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem4);
-            ListGoodsItem listGoodsItem5 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem5);
-            ListGoodsItem listGoodsItem6 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem6);
-            ListGoodsItem listGoodsItem7 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem7);
-            ListGoodsItem listGoodsItem8 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem8);
-            ListGoodsItem listGoodsItem9 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem9);
-            ListGoodsItem listGoodsItem10 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem10);
-            ListGoodsItem listGoodsItem11 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem11);
-            ListGoodsItem listGoodsItem12 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem12);
-            ListGoodsItem listGoodsItem13 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem13);
-            ListGoodsItem listGoodsItem14 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem14);
-            ListGoodsItem listGoodsItem15 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            mListGoodsItems.add(listGoodsItem15);
-        }
+        GoodsArrayList.createInitDataGoods(mListGoodsItems, getContext());
     }
 
 

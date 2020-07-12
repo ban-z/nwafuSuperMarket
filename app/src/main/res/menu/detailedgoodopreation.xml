@@ -3,34 +3,22 @@
 
     <item android:id="@+id/detailed_good_opreation_1"
         android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
+        android:title="服务"/>
 
     <item android:id="@+id/detailed_good_opreation_2"
         android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
+        android:title="选择"/>
 
     <item android:id="@+id/detailed_good_opreation_3"
         android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
+        android:title="参数"/>
 
     <item android:id="@+id/detailed_good_opreation_4"
         android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
+        android:title="评价"/>
 
     <item android:id="@+id/detailed_good_opreation_5"
         android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
-
-    <item android:id="@+id/detailed_good_opreation_6"
-        android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
-
-    <item android:id="@+id/detailed_good_opreation_7"
-        android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
-
-    <item android:id="@+id/detailed_good_opreation_8"
-        android:icon="@drawable/ic_setting"
-        android:title="好难搞哦"/>
+        android:title="问大家"/>
 
 </menu>

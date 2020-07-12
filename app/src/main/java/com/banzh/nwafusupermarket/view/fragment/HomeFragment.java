@@ -24,6 +24,7 @@ import com.banzh.nwafusupermarket.R;
 import com.banzh.nwafusupermarket.adapter.ListGoodsAdapter;
 import com.banzh.nwafusupermarket.adapter.RmdViewPagerAdapter;
 import com.banzh.nwafusupermarket.data.ListGoodsItem;
+import com.banzh.nwafusupermarket.data.creater.GoodsArrayList;
 import com.banzh.nwafusupermarket.databinding.FragmentHomeBinding;
 import com.banzh.nwafusupermarket.databinding.FragmentHomeListHeaderBinding;
 
@@ -47,7 +48,7 @@ public class HomeFragment extends Fragment {
     TextView tvSerach;
 
 
-    List<ListGoodsItem> listGoodsItems = new ArrayList<>();
+    ArrayList<ListGoodsItem> listGoodsItems = new ArrayList<>();
 
     public HomeFragment() {
         // Required empty public constructor
@@ -102,40 +103,22 @@ public class HomeFragment extends Fragment {
         listViewGoods.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListGoodsItem item = listGoodsItems.get(position);
+                //ListView与ArrayList的position差1
+                ListGoodsItem item = listGoodsItems.get(position - 1);
                 Toast.makeText(getContext(), item.getTitle(), Toast.LENGTH_LONG).show();
 
-                //跳转到商品页面
+                // 跳转到商品页面
+                // 携带商品信息
+                Bundle bundle = new Bundle();
+                bundle.putInt("goodId", position - 1);
                 NavHostFragment.findNavController(HomeFragment.this)
-                        .navigate(R.id.action_homeFragment_to_goodFragment);
+                        .navigate(R.id.action_homeFragment_to_goodFragment, bundle);
             }
         });
     }
 
     private void initGoodItems() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            ListGoodsItem listGoodsItem1 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem1);
-            ListGoodsItem listGoodsItem2 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem2);
-            ListGoodsItem listGoodsItem3 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem3);
-            ListGoodsItem listGoodsItem4 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem4);
-            ListGoodsItem listGoodsItem5 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem5);
-            ListGoodsItem listGoodsItem6 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem6);
-            ListGoodsItem listGoodsItem7 = new ListGoodsItem(getContext().getDrawable(R.drawable.ic_launcher_foreground),
-                    "标题", "内容内容内容......");
-            listGoodsItems.add(listGoodsItem7);
-        }
+        GoodsArrayList.createInitDataGoods(listGoodsItems, getContext());
     }
 
     private void initViewPager(View view) {
